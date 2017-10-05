@@ -2,5 +2,6 @@ language: generic
 install: ./build.sh
 script: ./test.sh
 env:
-  - NGINX_V=1.12.1 OPENRESTY_V=1.11.2.4
-  - OPENRESTY_V=1.11.2.5
+  - NGINX_V=1.11.2 OPENRESTY_V=1.11.2.5
+  - NGINX_V=1.12.1 OPENRESTY_V=1.11.2.5
+  - NGINX_V=1.13.5 OPENRESTY_V=1.11.2.5
