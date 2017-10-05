@@ -1,3 +1,4 @@
+language: generic
 install: ./build.sh
 script: ./test.sh
 env:
