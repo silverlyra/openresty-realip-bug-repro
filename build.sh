@@ -35,8 +35,8 @@ build() {
     ./configure \
         --prefix="$BASE/out/$product" \
         --with-http_realip_module \
-        --with-pcre="$BASE/tmp/pcre-$PCRE" \
-        --with-openssl="$BASE/tmp/openssl-$OPENSSL"
+        --with-pcre="$BASE/tmp/pcre-$PCRE_V" \
+        --with-openssl="$BASE/tmp/openssl-$OPENSSL_V"
     make -j"$(getconf _NPROCESSORS_ONLN)"
     make install
 }
@@ -48,10 +48,10 @@ source "$BASE/versions.sh"
 
 mkdir -p "$BASE/tmp" "$BASE/out"
 
-fetch pcre "$PCRE" https://ftp.pcre.org/pub/pcre
-fetch openssl "$OPENSSL" https://www.openssl.org/source
-fetch nginx "$NGINX" https://nginx.org/download
-fetch openresty "$OPENRESTY" https://openresty.org/download
+fetch pcre "$PCRE_V" https://ftp.pcre.org/pub/pcre
+fetch openssl "$OPENSSL_V" https://www.openssl.org/source
+fetch nginx "$NGINX_V" https://nginx.org/download
+fetch openresty "$OPENRESTY_V" https://openresty.org/download
 
-build nginx "$NGINX"
-build openresty "$OPENRESTY"
+build nginx "$NGINX_V"
+build openresty "$OPENRESTY_V"

@@ -7,7 +7,7 @@ readonly BASE="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 # shellcheck source=versions.sh
 source "$BASE/versions.sh"
 
-readonly CASES=("nginx-$NGINX" "openresty-$OPENRESTY")
+readonly CASES=("nginx-$NGINX_V" "openresty-$OPENRESTY_V")
 
 mkdir -p "$BASE/results"
 
