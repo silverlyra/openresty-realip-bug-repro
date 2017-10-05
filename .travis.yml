@@ -1,0 +1,5 @@
+install: ./build.sh
+script: ./test.sh
+env:
+  - NGINX=1.12.1 OPENRESTY=1.11.2.4
+  - OPENRESTY=1.11.2.5
